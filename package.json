@@ -1,0 +1,26 @@
+{
+  "name": "MochaTestReporter",
+  "version": "1.0.0",
+  "description": "A simple Mocha reporter",
+  "main": "index.js",
+  "private": false,
+  "keywords": [
+    "reporter"
+  ],
+  "readmeFilename": "README.md",
+  "scripts": {
+    "tsc": "tsc",
+    "clean": "rimraf dist",
+    "build": "npm run clean && npm run tsc"
+  },
+  "dependencies": {
+    "chalk": "^5.1.1",
+    "mocha": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^8.2.3",
+    "@types/node": "^18.8.4",
+    "rimraf": "^2.7.1",
+    "typescript": "^4.4.3"
+  }
+}
