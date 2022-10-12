@@ -17,6 +17,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MochaTestReporter = void 0;
 var mocha_1 = require("mocha");
+var ReporterLogger = require('./reporter.logger');
 var Mocha = require('mocha');
 var _a = Mocha.Runner.constants, EVENT_HOOK_BEGIN = _a.EVENT_HOOK_BEGIN, EVENT_HOOK_END = _a.EVENT_HOOK_END, EVENT_RUN_BEGIN = _a.EVENT_RUN_BEGIN, EVENT_RUN_END = _a.EVENT_RUN_END, EVENT_TEST_BEGIN = _a.EVENT_TEST_BEGIN, EVENT_TEST_END = _a.EVENT_TEST_END, EVENT_TEST_FAIL = _a.EVENT_TEST_FAIL, EVENT_TEST_PASS = _a.EVENT_TEST_PASS, EVENT_TEST_RETRY = _a.EVENT_TEST_RETRY, EVENT_SUITE_BEGIN = _a.EVENT_SUITE_BEGIN, EVENT_SUITE_END = _a.EVENT_SUITE_END, STATE_RUNNING = _a.STATE_RUNNING, STATE_STOPPED = _a.STATE_STOPPED;
 var MochaTestReporter = /** @class */ (function (_super) {

@@ -1,6 +1,8 @@
 import { reporters } from 'mocha';
 
+const ReporterLogger = require('./reporter.logger');
 const Mocha = require('mocha');
+
 const {
     EVENT_HOOK_BEGIN,
     EVENT_HOOK_END,
