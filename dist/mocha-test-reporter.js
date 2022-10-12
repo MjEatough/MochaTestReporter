@@ -17,51 +17,51 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MochaTestReporter = void 0;
 var mocha_1 = require("mocha");
-var ReporterLogger = require('./reporter.logger');
 var Mocha = require('mocha');
+var chalk = require('chalk');
 var _a = Mocha.Runner.constants, EVENT_HOOK_BEGIN = _a.EVENT_HOOK_BEGIN, EVENT_HOOK_END = _a.EVENT_HOOK_END, EVENT_RUN_BEGIN = _a.EVENT_RUN_BEGIN, EVENT_RUN_END = _a.EVENT_RUN_END, EVENT_TEST_BEGIN = _a.EVENT_TEST_BEGIN, EVENT_TEST_END = _a.EVENT_TEST_END, EVENT_TEST_FAIL = _a.EVENT_TEST_FAIL, EVENT_TEST_PASS = _a.EVENT_TEST_PASS, EVENT_TEST_RETRY = _a.EVENT_TEST_RETRY, EVENT_SUITE_BEGIN = _a.EVENT_SUITE_BEGIN, EVENT_SUITE_END = _a.EVENT_SUITE_END, STATE_RUNNING = _a.STATE_RUNNING, STATE_STOPPED = _a.STATE_STOPPED;
 var MochaTestReporter = /** @class */ (function (_super) {
     __extends(MochaTestReporter, _super);
     function MochaTestReporter(runner, options) {
         var _this = _super.call(this, runner) || this;
         runner.on(EVENT_HOOK_BEGIN, function () {
-            ReporterLogger.log('EVENT_HOOK_BEGIN');
+            console.log(chalk.magenta.underline.bold('(Mocha Test Reporter) : EVENT_HOOK_BEGIN'));
         });
         runner.on(EVENT_HOOK_END, function () {
-            ReporterLogger.log('EVENT_HOOK_END');
+            console.log(chalk.magenta.underline.bold('(Mocha Test Reporter) : EVENT_HOOK_END'));
         });
         runner.on(EVENT_RUN_BEGIN, function () {
-            ReporterLogger.log('EVENT_RUN_BEGIN');
+            console.log(chalk.magenta.underline.bold('(Mocha Test Reporter) : EVENT_RUN_BEGIN'));
         });
         runner.on(EVENT_RUN_END, function () {
-            ReporterLogger.log('EVENT_RUN_END');
+            console.log(chalk.magenta.underline.bold('(Mocha Test Reporter) : EVENT_RUN_END'));
         });
         runner.on(EVENT_TEST_BEGIN, function () {
-            ReporterLogger.log('EVENT_TEST_BEGIN');
+            console.log(chalk.magenta.underline.bold('(Mocha Test Reporter) : EVENT_TEST_BEGIN'));
         });
         runner.on(EVENT_TEST_END, function () {
-            ReporterLogger.log('EVENT_TEST_END');
+            console.log(chalk.magenta.underline.bold('(Mocha Test Reporter) : EVENT_TEST_END'));
         });
         runner.on(EVENT_TEST_FAIL, function () {
-            ReporterLogger.log('EVENT_TEST_FAIL');
+            console.log(chalk.magenta.underline.bold('(Mocha Test Reporter) : EVENT_TEST_FAIL'));
         });
         runner.on(EVENT_TEST_PASS, function () {
-            ReporterLogger.log('EVENT_TEST_PASS');
+            console.log(chalk.magenta.underline.bold('(Mocha Test Reporter) : EVENT_TEST_PASS'));
         });
         runner.on(EVENT_TEST_RETRY, function () {
-            ReporterLogger.log('EVENT_TEST_RETRY');
+            console.log(chalk.magenta.underline.bold('(Mocha Test Reporter) : EVENT_TEST_RETRY'));
         });
         runner.on(EVENT_SUITE_BEGIN, function () {
-            ReporterLogger.log('EVENT_SUITE_BEGIN');
+            console.log(chalk.magenta.underline.bold('(Mocha Test Reporter) : EVENT_SUITE_BEGIN'));
         });
         runner.on(EVENT_SUITE_END, function () {
-            ReporterLogger.log('EVENT_SUITE_END');
+            console.log(chalk.magenta.underline.bold('(Mocha Test Reporter) : EVENT_SUITE_END'));
         });
         runner.on(STATE_RUNNING, function () {
-            ReporterLogger.log('STATE_RUNNING');
+            console.log(chalk.magenta.underline.bold('(Mocha Test Reporter) : STATE_RUNNING'));
         });
         runner.on(STATE_STOPPED, function () {
-            ReporterLogger.log('STATE_STOPPED');
+            console.log(chalk.magenta.underline.bold('(Mocha Test Reporter) : STATE_STOPPED'));
         });
         return _this;
     }
