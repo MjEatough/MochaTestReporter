@@ -17,7 +17,7 @@ const {
     STATE_STOPPED
 } = Mocha.Runner.constants;
 
-export class CypressTestRailReporter extends reporters.Spec {
+export class MochaTestReporter extends reporters.Spec {
     constructor(runner: any, options: any) {
         super(runner);
 
